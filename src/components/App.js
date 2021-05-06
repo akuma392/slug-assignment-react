@@ -27,13 +27,9 @@ class App extends React.Component {
       <BrowserRouter>
         <Header state={this.state.aside} handleClick={this.handleClick} />
         <div className="app">
-          {this.state.aside ? (
-            <>
-              <Aside /> <RouterApp />
-            </>
-          ) : (
-            <RouterApp />
-          )}
+          {this.state.aside ? <Aside /> : ''}
+
+          <RouterApp />
         </div>
       </BrowserRouter>
     );
